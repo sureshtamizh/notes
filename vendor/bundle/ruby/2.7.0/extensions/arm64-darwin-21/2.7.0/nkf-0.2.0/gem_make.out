@@ -1,0 +1,16 @@
+current directory: /Users/suresh/Documents/MyReacts/notes/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+/opt/homebrew/opt/ruby@2.7/bin/ruby -I /opt/homebrew/Cellar/ruby@2.7/2.7.6/lib/ruby/2.7.0 -r ./siteconf20241016-57211-yr5vr4.rb extconf.rb
+creating Makefile
+
+current directory: /Users/suresh/Documents/MyReacts/notes/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= clean
+
+current directory: /Users/suresh/Documents/MyReacts/notes/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\=
+compiling nkf.c
+linking shared-object nkf.bundle
+ld: warning: -multiply_defined is obsolete
+
+current directory: /Users/suresh/Documents/MyReacts/notes/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20241016-57211-r9jqg3
