@@ -12,7 +12,9 @@ import Animated, {
     withTiming,
 } from 'react-native-reanimated';
 
-const FloatButtton = ({ navigations }) => {
+const FloatButtton = React.memo(({ navigations }) => {
+
+    console.log("render flat")
     const firstValue = useSharedValue(10);
     const secondValue = useSharedValue(10);
     const isOpen = useSharedValue(false);
@@ -103,7 +105,7 @@ const FloatButtton = ({ navigations }) => {
             </Pressable>
         </View>
     );
-};
+});
 
 export default FloatButtton;
 
