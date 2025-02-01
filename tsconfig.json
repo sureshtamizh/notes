@@ -1,6 +1,11 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
-    "module": "esnext" // Ensure dynamic imports are supported
+    "module": "esnext", // Ensure dynamic imports are supported
+    "types": [
+      "jest",
+      "react",
+      "react-native"
+    ]
   }
 }

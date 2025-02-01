@@ -1,7 +1,13 @@
 module.exports = {
-  preset: "react-native",
-  setupFilesAfterEnv: ["@testing-library/jest-native/extend-expect"],
-  moduleNameMapper: {
-    "\\.(png|jpg|jpeg|gif|ttf|woff|woff2|svg)$": "<rootDir>/__mocks__/fileMock.js"
-  }
+  preset: 'react-native',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(jest-)?react-native|@react-native|react-native-gesture-handler/)',
+  ],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.png$': 'jest-transform-stub',
+  },
 };
