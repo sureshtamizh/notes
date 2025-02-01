@@ -32,3 +32,9 @@ jobs:
         with:
           name: android-app
           path: android/app/build/outputs/apk/release/app-release.apk
+          
+      - name: Clean Cache
+        run: rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force
+
+      - name: Install Dependencies
+        run: npm install
