@@ -1,24 +1,25 @@
 import React from "react";
-import ProfileScreen from "./src/screens/ProfileScreen";
-
-// import { NavigationContainer } from "@react-navigation/native";
-// import { createStackNavigator, TransitionPresets } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator, TransitionPresets } from "@react-navigation/stack";
 
 
+import Home from "./src/screens/Home";
+import Splash from "./src/screens/Splash";
 
-// const NoteDetails = React.lazy(() => import('./src/screens/NotesDetails'))
 
-// const Stack = createStackNavigator()
+const NoteDetails = React.lazy(() => import('./src/screens/NotesDetails'))
+
+const Stack = createStackNavigator()
 
 const App = () => {
     return (
-        <ProfileScreen />
-        // <NavigationContainer>
-        //     <Stack.Navigator screenOptions={{ ...TransitionPresets.SlideFromRightIOS, keyboardHandlingEnabled: true }}>
-        //         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-        //         <Stack.Screen name="NoteDetails" component={NoteDetails} />
-        //     </Stack.Navigator>
-        // </NavigationContainer>
+        <NavigationContainer>
+            <Stack.Navigator screenOptions={{ ...TransitionPresets.SlideFromRightIOS, keyboardHandlingEnabled: true }}>
+                {/* <Stack.Screen name="splash" component={Splash}></Stack.Screen> */}
+                <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+                <Stack.Screen name="NoteDetails" component={NoteDetails} />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
 
